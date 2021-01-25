@@ -1,0 +1,31 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/Yar56/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/Yar56/frontend-project-lvl2/actions)",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yar56/frontend-project-lvl2.git"
+  },
+  "author": "Yaroslav Vavilin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yar56/frontend-project-lvl2/issues"
+  },
+  "homepage": "https://github.com/Yar56/frontend-project-lvl2#readme",
+  "dependencies": {
+    "commander": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
