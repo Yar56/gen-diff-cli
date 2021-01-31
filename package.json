@@ -1,11 +1,11 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Yar56/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/Yar56/frontend-project-lvl2/actions)",
+  "description": "difference calculator",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
-  "main": "index.js",
+  "main": "api.js",
   "type": "module",
   "scripts": {
     "test": "npx jest"
@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/Yar56/frontend-project-lvl2#readme",
   "dependencies": {
-    "commander": "^7.0.0"
+    "commander": "^7.0.0",
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
