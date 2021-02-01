@@ -3,6 +3,7 @@ import { Command } from 'commander';
 import getDiff from '../lib/api.js';
 
 const program = new Command();
+// const parse = (obj) => {};
 
 program
   .version('0.1.0')
