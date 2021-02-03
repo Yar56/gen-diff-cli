@@ -30,10 +30,16 @@ npm link
 ```
 
 ## Flat files 
-### Info
+### json vs json or yaml vs yaml or json vs yaml
 ```bash
 $ genfiff filepath1 filepath2
 ```
 ___The function takes flat file paths and returns the difference as plain text.___
 
+*JSON*
+
 [![asciicast](https://asciinema.org/a/388807.svg)](https://asciinema.org/a/388807)
+
+*YAML*
+
+[![asciicast](https://asciinema.org/a/388890.svg)](https://asciinema.org/a/388890)
