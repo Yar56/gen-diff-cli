@@ -19,7 +19,7 @@ A difference calculator is a program that determines the difference between two 
   - Report generation as plain text, stylish and json
 
 ## Prerequisite
-You need [Node.js](https://nodejs.org) installed on your machine.
+You need [Node.js](https://nodejs.org) installed on your machine. ( node-version: __[14.x]__ )
 
 ## Installing / Getting started
 
