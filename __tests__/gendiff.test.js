@@ -13,7 +13,7 @@ let correctResult;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', 'nested', filename);
+const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
 beforeAll(() => {
@@ -22,7 +22,7 @@ beforeAll(() => {
   ymlBefore = getFixturePath('before.yml');
   ymlAfter = getFixturePath('after.yml');
 
-  correctResult = readFile('result.txt');
+  correctResult = readFile('resultStylish.txt');
 });
 
 test('correct difference of the nested files', () => {
