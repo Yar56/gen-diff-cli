@@ -34,12 +34,24 @@ npm link
 ```bash
 $ genfiff filepath1 filepath2
 ```
-___The function takes flat file paths and returns the difference as plain text.___
+___The function takes paths to flat files and returns the difference in plain text.___
 
 *JSON*
 
-[![asciicast](https://asciinema.org/a/388807.svg)](https://asciinema.org/a/388807)
+[![asciicast](https://asciinema.org/a/GoSCVL2KwXSG8sxkyGKH1MCQJ.svg)](https://asciinema.org/a/GoSCVL2KwXSG8sxkyGKH1MCQJ)
 
 *YAML*
 
 [![asciicast](https://asciinema.org/a/388890.svg)](https://asciinema.org/a/388890)
+
+## Nested files
+
+### json vs json or yaml vs yaml or json vs yaml
+```bash
+$ genfiff filepath1 filepath2
+```
+__The function takes paths to nested files and returns the difference in stylish format.__
+
+*JSON and YML*
+
+[![asciicast](https://asciinema.org/a/99Qo2PLkgX4yxtPlW9YrBlDqn.svg)](https://asciinema.org/a/99Qo2PLkgX4yxtPlW9YrBlDqn)

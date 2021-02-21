@@ -1,7 +1,6 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
 import fs from 'fs';
-
 import { beforeAll, test, expect } from '@jest/globals';
 import genDiff from '../lib/index.js';
 
@@ -28,4 +27,5 @@ beforeAll(() => {
 test('correct difference of the nested files', () => {
   expect(genDiff(jsonBefore, jsonAfter)).toBe(correctResult);
   expect(genDiff(ymlBefore, ymlAfter)).toBe(correctResult);
+  expect(genDiff(jsonBefore, ymlAfter)).toBe(correctResult);
 });
