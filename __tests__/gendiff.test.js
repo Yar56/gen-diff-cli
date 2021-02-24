@@ -8,7 +8,8 @@ let jsonBefore;
 let jsonAfter;
 let ymlBefore;
 let ymlAfter;
-let correctResult;
+let stylishCorrectResult;
+let plainCorrectResult;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,11 +22,16 @@ beforeAll(() => {
   ymlBefore = getFixturePath('before.yml');
   ymlAfter = getFixturePath('after.yml');
 
-  correctResult = readFile('resultStylish.txt');
+  stylishCorrectResult = readFile('stylishResult.txt');
+  plainCorrectResult = readFile('plainResult.txt');
 });
 
-test('correct difference of the nested files', () => {
-  expect(genDiff(jsonBefore, jsonAfter)).toBe(correctResult);
-  expect(genDiff(ymlBefore, ymlAfter)).toBe(correctResult);
-  expect(genDiff(jsonBefore, ymlAfter)).toBe(correctResult);
+test('correct difference of the nested files (stylish)', () => {
+  expect(genDiff(jsonBefore, jsonAfter)).toBe(stylishCorrectResult);
+  expect(genDiff(ymlBefore, ymlAfter)).toBe(stylishCorrectResult);
+  expect(genDiff(jsonBefore, ymlAfter)).toBe(stylishCorrectResult);
+});
+test('correct difference of the nested files (plain)', () => {
+  expect(genDiff(jsonBefore, jsonAfter, 'plain')).toBe(plainCorrectResult);
+  expect(genDiff(jsonBefore, ymlAfter, 'plain')).toBe(plainCorrectResult);
 });
