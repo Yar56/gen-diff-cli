@@ -55,3 +55,20 @@ __The function takes paths to nested files and returns the difference in stylish
 *JSON and YML*
 
 [![asciicast](https://asciinema.org/a/99Qo2PLkgX4yxtPlW9YrBlDqn.svg)](https://asciinema.org/a/99Qo2PLkgX4yxtPlW9YrBlDqn)
+
+## Formats
+
+### stylish (default format)
+```bash
+$ genfiff filepath1 filepath2
+```
+### plain
+```bash
+$ genfiff -f plain filepath1 filepath2
+```
+
+__Examples of formats.__
+
+*stylish and plain*
+
+[![asciicast](https://asciinema.org/a/KDWMIglTTOXFVclQlZMFSLeRP.svg)](https://asciinema.org/a/KDWMIglTTOXFVclQlZMFSLeRP)
