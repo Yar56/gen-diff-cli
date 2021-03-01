@@ -36,13 +36,20 @@ $ genfiff filepath1 filepath2
 ```
 ___The function takes paths to flat files and returns the difference in plain text.___
 
-*JSON*
+<details>
+<summary>asciinema (JSON)</summary>
 
 [![asciicast](https://asciinema.org/a/GoSCVL2KwXSG8sxkyGKH1MCQJ.svg)](https://asciinema.org/a/GoSCVL2KwXSG8sxkyGKH1MCQJ)
+</details>
+<br>
 
-*YAML*
+
+<details>
+<summary>asciinema (YML)</summary>
 
 [![asciicast](https://asciinema.org/a/388890.svg)](https://asciinema.org/a/388890)
+</details>
+<br>
 
 ## Nested files
 
@@ -52,9 +59,13 @@ $ genfiff filepath1 filepath2
 ```
 __The function takes paths to nested files and returns the difference in stylish format.__
 
-*JSON and YML*
+<details>
+<summary>asciinema (SON and YML)</summary>
 
 [![asciicast](https://asciinema.org/a/99Qo2PLkgX4yxtPlW9YrBlDqn.svg)](https://asciinema.org/a/99Qo2PLkgX4yxtPlW9YrBlDqn)
+</details>
+<br>
+
 
 ## Formats
 
@@ -67,8 +78,19 @@ $ genfiff filepath1 filepath2
 $ genfiff -f plain filepath1 filepath2
 ```
 
-__Examples of formats.__
-
-*stylish and plain*
+<details>
+<summary>asciinema (stylish and plain)</summary>
 
 [![asciicast](https://asciinema.org/a/KDWMIglTTOXFVclQlZMFSLeRP.svg)](https://asciinema.org/a/KDWMIglTTOXFVclQlZMFSLeRP)
+</details>
+<br>
+
+### json
+```bash
+$ genfiff -f json filepath1 filepath2
+```
+<details>
+<summary>asciinema (json format)</summary>
+
+[![asciicast](https://asciinema.org/a/395432.svg)](https://asciinema.org/a/395432)
+</details>
