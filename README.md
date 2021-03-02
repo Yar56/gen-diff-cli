@@ -94,3 +94,5 @@ $ genfiff -f json filepath1 filepath2
 
 [![asciicast](https://asciinema.org/a/395432.svg)](https://asciinema.org/a/395432)
 </details>
+
+### check tests
