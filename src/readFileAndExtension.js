@@ -1,11 +1,11 @@
 import path from 'path';
 import fs from 'fs';
 
-const readFile = (filePath) => {
+const readFileAndExtension = (filePath) => {
   const absoluteFilePath = path.resolve(process.cwd(), filePath);
   const dataFile = fs.readFileSync(absoluteFilePath, 'utf-8');
-
-  return dataFile;
+  const extension = path.extname(absoluteFilePath).slice(1);
+  return [dataFile, extension];
 };
 
-export default readFile;
+export default readFileAndExtension;
