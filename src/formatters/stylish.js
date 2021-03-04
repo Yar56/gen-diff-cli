@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const getIndent = (depth) => '    '.repeat(depth);
+const getIndent = (depth) => ' '.repeat(4).repeat(depth);
 
 const stringify = (value, depth = 0) => {
   if (!_.isObject(value)) {
@@ -26,32 +26,18 @@ const stylish = (currentValue, depth = 0) => {
     oldValue,
     newValue,
   }) => {
+    const getString = (strKey, value, strDepth, sign = ' ') => `${getIndent(strDepth)}  ${sign} ${strKey}: ${stringify(value, strDepth + 1)}`;
     if (status === 'removed') {
-      return `${getIndent(depth)}  ${propDeleteSign} ${key}: ${stringify(
-        oldValue,
-        depth + 1,
-      )}`;
+      return getString(key, oldValue, depth, propDeleteSign);
     }
     if (status === 'added') {
-      return `${getIndent(depth)}  ${propAddSign} ${key}: ${stringify(
-        newValue,
-        depth + 1,
-      )}`;
+      return getString(key, newValue, depth, propAddSign);
     }
     if (status === 'changed') {
-      return `${getIndent(depth)}  ${propDeleteSign} ${key}: ${stringify(
-        oldValue,
-        depth + 1,
-      )}\n${getIndent(depth)}  ${propAddSign} ${key}: ${stringify(
-        newValue,
-        depth + 1,
-      )}`;
+      return `${getString(key, oldValue, depth, propDeleteSign)}\n${getString(key, newValue, depth, propAddSign)}`;
     }
     if (status === 'unchanged') {
-      return `${getIndent(depth)}    ${key}: ${stringify(
-        oldValue,
-        depth + 1,
-      )}`;
+      return getString(key, oldValue, depth);
     }
     return `${getIndent(depth)}    ${key}: ${stylish(children, depth + 1)}`;
   });
