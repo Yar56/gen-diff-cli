@@ -7,10 +7,10 @@ const generateDiff = (data1, data2) => {
   const diff = sharedKeys.map((key) => {
     const oldValue = data1[key];
     const newValue = data2[key];
-    if (!_.has(data1, key) && _.has(data2, key)) {
+    if (!_.has(data1, key)) {
       return { key, status: 'added', newValue };
     }
-    if (!_.has(data2, key) && _.has(data1, key)) {
+    if (!_.has(data2, key)) {
       return { key, status: 'removed', oldValue };
     }
     if (_.isObject(oldValue) && _.isObject(newValue)) {
