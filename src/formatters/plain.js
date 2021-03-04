@@ -29,23 +29,6 @@ export default (diff) => {
         default:
           return iter(children, newPath);
       }
-      // if (status === 'added') {
-      //   return `Property '${newPath}' was added with value: ${stringify(
-      //     newValue,
-      //   )}`;
-      // }
-      // if (status === 'removed') {
-      //   return `Property '${newPath}' was removed`;
-      // }
-      // if (status === 'changed') {
-      //   return `Property '${newPath}' was updated. From ${stringify(
-      //     oldValue,
-      //   )} to ${stringify(newValue)}`;
-      // }
-      // if (status === 'unchanged') {
-      //   return [];
-      // }
-      // return iter(children, newPath);
     });
     return lines.flat().join('\n');
   };
