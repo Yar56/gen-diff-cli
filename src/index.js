@@ -1,6 +1,6 @@
 import generateDiff from './generateDiff.js';
 import formatChoice from './formatters/index.js';
-import readFileAndExtension from './readFileAndExtension.js';
+import readFileAndExtension from './readFile.js';
 import parse from './parse.js';
 
 const genDiff = (path1, path2, formatName = 'stylish') => {
